@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Me want food!!!</title>
+	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="food.js"></script>
+
+</head>
+<body>
+
+	<div class="jumbotron jumbotron-fluid">
+ 		<div class="container">
+			<h1 class="display-4">Me want food!!!</h1>
+			<p class="lead">Make a reservation at our shithole. "Uncle Luigi's authentic Italian Sushi"</p>
+  		</div>
+	</div>
+	<form style="width: 500px">
+  		<div class="form-group">
+    		<label for="nameInput">Name</label>
+    		<input type="" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter Name">
+  		</div>
+  		<div class="form-group">
+    		<label for="timeInput">Time</label>
+    		<input type="" class="form-control" id="timeInput" aria-describedby="emailHelp" placeholder="Enter Time">
+  		</div>
+  		<div class="form-group">
+    		<label for="phoneInput">Phone</label>
+    		<input type="" class="form-control" id="phoneInput" aria-describedby="emailHelp" placeholder="Enter Phone">
+  		</div>
+
+  		<button type="submit" class="submit-btn btn btn-primary">Submit</button>
+	</form>
+</body>
+
+<script type="text/javascript">
+  
+
+  $(".btn").on("click" , function() {
+  event.preventDefault();
+  var customerName = $("#nameInput").val();
+  var customerTime = $("#timeInput").val();
+  var customerPhone = $("#phoneInput").val();
+  
+  $("#nameInput").val("");
+  $("#timeInput").val("");
+  $("#phoneInput").val("");
+
+  reservationInput(customerName, customerTime, customerPhone);
+});
+
+</script>
+</html>
